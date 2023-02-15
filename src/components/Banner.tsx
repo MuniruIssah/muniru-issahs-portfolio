@@ -11,7 +11,7 @@ const Banner = () => {
     };
     return (
         <div className={'banner min-h-[100vh]'}>
-            <div className={'max-w-[80vw] mx-auto h-[100vh] flex flex-col space-y-10 justify-center'}>
+            <div className={'w-full px-5 lg:max-w-[80vw] mx-auto h-[100vh] flex flex-col space-y-10 justify-center'}>
                 <h1 className={'text-6xl text-left font-extrabold'}>Hello 👋🏿 , I am Muniru Issah,<br/>
                     a Fullstack Software Engineer.
                 </h1>
