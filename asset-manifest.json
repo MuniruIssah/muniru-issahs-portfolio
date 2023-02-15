@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/muniru-issahs-portfolio/static/css/main.77292575.css",
+    "main.js": "/muniru-issahs-portfolio/static/js/main.b21e034e.js",
+    "static/js/787.59c99e82.chunk.js": "/muniru-issahs-portfolio/static/js/787.59c99e82.chunk.js",
+    "index.html": "/muniru-issahs-portfolio/index.html",
+    "main.77292575.css.map": "/muniru-issahs-portfolio/static/css/main.77292575.css.map",
+    "main.b21e034e.js.map": "/muniru-issahs-portfolio/static/js/main.b21e034e.js.map",
+    "787.59c99e82.chunk.js.map": "/muniru-issahs-portfolio/static/js/787.59c99e82.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77292575.css",
+    "static/js/main.b21e034e.js"
+  ]
+}
