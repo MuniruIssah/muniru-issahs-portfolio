@@ -1,4 +1,4 @@
-import React, {ReactElement, useMemo, useState} from 'react';
+import React, { useMemo, useState} from 'react';
 import ContactTabs from "./ContactTabs";
 import ContactTabBody from "./ContactTabBody";
 import {AiOutlineWhatsApp} from "react-icons/ai";
@@ -8,7 +8,6 @@ const Contact = () => {
     const [state,setState]=useState("Email");
     const handleTab=(newTab:string)=>{
         setState(newTab);
-        console.log("This is Active",state)
     }
 
     const memo=useMemo(()=>{
@@ -19,7 +18,7 @@ const Contact = () => {
                 return <ContactTabBody icon={<AiOutlineWhatsApp/>} title={"Send me a Whatsapp Message"}><a href={'https://wa.me/233505707987'} target={'_blank'}>Message</a></ContactTabBody>
             default:
                 return <ContactTabBody icon={<CiTwitter/>} title={"DM me on Twitter"}><a
-                    href="https://twitter.com/messages/compose?recipient_id=3805104374&text=Hello%20world"
+                    href="https://twitter.com/messages/compose?recipient_id=1154283791072071680&text=Hello%20world"
                     target={'_blank'}
                     className="twitter-dm-button"
                     data-screen-name="@ningen_dewa_nai">
