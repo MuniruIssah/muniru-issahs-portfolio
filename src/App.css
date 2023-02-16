@@ -50,3 +50,35 @@
   background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  border: 0.5px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.vertically {
+  border-left: 3px dashed lightgray;
+  height: 40px;
+}
