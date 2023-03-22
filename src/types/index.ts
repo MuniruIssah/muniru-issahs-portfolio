@@ -2,7 +2,8 @@ import {ReactElement} from "react";
 
 interface SocialMediaType{
    to:string,
-   icon:ReactElement
+   icon:ReactElement,
+   small?:boolean
 
 }
 interface ContactTabsType{
@@ -15,5 +16,14 @@ interface ContactTabType{
    active:string,
    activeStyles:string
 }
+interface optionsType{
+   value:string,
+   label:string
+}
 
-export type {SocialMediaType,ContactTabType,ContactTabsType}
+interface projectType{
+   title:string,
+   description:string,
+   tools:Array<ReactElement>
+}
+export type {SocialMediaType,ContactTabType,ContactTabsType,optionsType,projectType}
