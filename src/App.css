@@ -3,6 +3,8 @@
   background: #171717;  /* fallback for old browsers */
   /*background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  !* Chrome 10-25, Safari 5.1-6 *!*/
   /*background: linear-gradient(to right, #eef2f3, #8e9eab); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+  --bg-color: rgb(20, 20, 20);
+  --card-color: rgb(23, 23, 23);
 
 }
 
@@ -112,47 +114,6 @@ details[open] summary {
   border: 1px solid rgba(192,192,192,85%);
 }
 
-/*.swiper-slide:nth-child(1n) {*/
-/*  background-color: rgb(206, 17, 17);*/
-/*}*/
-
-/*.swiper-slide:nth-child(2n) {*/
-/*  background-color: rgb(0, 140, 255);*/
-/*}*/
-
-/*.swiper-slide:nth-child(3n) {*/
-/*  background-color: rgb(10, 184, 111);*/
-/*}*/
-
-/*.swiper-slide:nth-child(4n) {*/
-/*  background-color: rgb(211, 122, 7);*/
-/*}*/
-
-/*.swiper-slide:nth-child(5n) {*/
-/*  background-color: rgb(118, 163, 12);*/
-/*}*/
-
-/*.swiper-slide:nth-child(6n) {*/
-/*  background-color: rgb(180, 10, 47);*/
-/*}*/
-
-/*.swiper-slide:nth-child(7n) {*/
-/*  background-color: rgb(35, 99, 19);*/
-/*}*/
-
-/*.swiper-slide:nth-child(8n) {*/
-/*  background-color: rgb(0, 68, 255);*/
-/*}*/
-
-/*.swiper-slide:nth-child(9n) {*/
-/*  background-color: rgb(218, 12, 218);*/
-/*}*/
-
-/*.swiper-slide:nth-child(10n) {*/
-/*  background-color: rgb(54, 94, 77);*/
-/*}*/
-
-
 .icon {
   background: #33CC00;
   background-image:url(http://www.cyberdesignz.com/blog/wp-content/uploads/2009/12/CSS.png);
@@ -244,4 +205,70 @@ details[open] summary {
             0% 100%
     );
   }
+}
+
+
+#cards {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  /*gap: 8px;*/
+}
+
+#cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card {
+  /*background-color: rgba(255, 255, 255, 0.1);*/
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(
+          800px circle at var(--mouse-x) var(--mouse-y),
+          rgba(255, 255, 255, 0.06),
+          transparent 40%
+  );
+  z-index: 3;
+}
+
+.card::after {
+  background: radial-gradient(
+          600px circle at var(--mouse-x) var(--mouse-y),
+          rgba(255, 255, 255, 0.4),
+          transparent 40%
+  );
+  z-index: 1;
+}
+
+.card > .card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
 }
